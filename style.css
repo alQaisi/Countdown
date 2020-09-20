@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Josefin+Sans&display=swap');
+body, html {
+  min-height: 100%;
+}
+body{
+  margin:0;
+  padding:0;
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1506452819137-0422416856b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80') no-repeat center center fixed;
+  background-size: cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size:17px;
+}
+h1{
+  font-size:2.5rem;
+}
+.container{
+  min-width: 550px;
+  height:auto;
+  background:rgb(255 255 255 /0.75);
+  padding:20px 55px;
+  border-radius:10px;
+}
+.input-container{
+  margin:0px 0 50px 0;
+}
+.container span{
+  font-weight: bold;
+  display: block;
+  margin-top:15px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+input{
+  font-family: 'IBM Plex Sans', sans-serif;
+  outline:none;
+  border:1px gray solid;
+  border-radius:25px;
+  width:95%;
+  height:25px;
+  padding:10px;
+  font-size:15px;
+}
+button{
+  cursor: pointer;
+  width:100%;
+  color:white;
+  font-size:17px;
+  background: coral;
+  outline:none;
+  border:none;
+  padding:15px;
+  margin:30px 0 0px 0px;
+  border-radius: 25px;
+  transition: filter .5s ease-in-out;
+}
+button:hover{
+  filter:brightness(135%);
+}
+.countdown li{
+  font-size:30px;
+  display: inline-block;
+  margin:0 25px
+}
+.countdown span{
+  font-size:5rem;
+}
+.countdown{
+  text-align: center;
+}
+ul{
+  padding-inline-start:0px;
+}
+label{
+  display: block;
+  margin-bottom:5px;
+}
+.complete{
+  text-align: center;
+}
+.complete button,.countdown button{
+  background-color: #064b3c;
+}
+.complete h1{
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: complete 3s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+@keyframes complete{
+  0%{
+    font-size:2rem; 
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 100% 0;
+    font-size:2.6rem;
+  }
+  100%{
+    background-position: 0 0;
+    font-size:2rem;
+  }
+}
+@media only screen  and (max-width:800px){
+  h1{
+    font-size:2rem;
+  }
+  .container{
+    padding:15px 25px;
+    min-width:100px;
+    min-height: 245px;
+  }
+  .input-container{
+    margin:15px;
+  }
+  .countdown li{
+  font-size:20px;
+  display: inline-block;
+  margin:0 20px
+  }
+  .countdown span{
+    font-size:4rem;
+  }
+
+}
+@media only screen  and (max-width:575px){
+  .container{
+    min-width:100px;
+    min-height: 245px;
+    padding: 20px;
+    margin:10px;
+  }
+  input{
+    font-size:12px;
+  }
+  .countdown li{
+    font-size:15px;
+    }
+    .countdown span{
+      font-size:2.5rem;
+    }
+    .countdown{
+      text-align: left;
+    }
+}
